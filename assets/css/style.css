@@ -342,6 +342,13 @@ main {
   height: auto;
   object-fit: cover;
 }
+.info-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  
+}
 .info-content .name {
   color: var(--white-2);
   font-size: var(--fs-3);
@@ -1391,6 +1398,38 @@ textarea.form-input::-webkit-resizer { display: none; }
   /**
    * #REUSED STYLE
    */
+/* Style for the button */
+/* Style for the button */
+/* Style for the button */
+/* Style for the button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between; /* Space between text and icon */
+  width: max-content; /* Adjust width to max-content */
+  padding: 3px 12px; /* Adjust padding */
+  background: #c1a207;
+  color: var(--white-1);
+  text-transform: lowercase;
+  font-size: var(--fs-8); /* Adjust font size */
+  font-weight: var(--fw-300); /* Adjust font weight */
+  border-radius: 8px; /* Adjust border radius */
+  box-shadow: var(--shadow-2);
+  transition: var(--transition-1);
+  text-decoration: none;
+  margin-top: 10px; /* Adjust margin as needed */
+}
+
+.btn span {
+  margin-right: 5px; /* Add some space between text and icon */
+}
+
+.btn ion-icon {
+  font-size: 1.2em; /* Adjust icon size */
+}
+
+
+
 
   .sidebar, article {
     width: 520px;
@@ -2007,10 +2046,18 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .contact-page-details a {
-  color: var(--text-gradient-yellow);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-1);
   text-decoration: none;
   font-weight: var(--fw-600); /* Make links bold */
+  background-color: #c1a207; /* Same background as resume */
+  border-radius: 8px; /* Slightly rounded borders */
+  padding: 3px 12px; /* Adjust padding to match the button */
+  display: inline-block; /* Ensures the background and border-radius are applied correctly */
 }
+
 
 .contact-page-details a:hover {
   text-decoration: underline;
