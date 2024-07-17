@@ -864,7 +864,52 @@ main {
  * skills 
  */
 /* Skills */
-.skills-title { margin-bottom: 20px; }
+.scale-legend {
+  margin: 10px 0 20px;
+  text-align: center;
+}
+
+.scale-line {
+  position: relative;
+  height: 10px;
+  background: var(--jet);
+  border-radius: 5px;
+  margin: 0 auto 10px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.scale-marker {
+  position: absolute;
+  top: -20px;
+  font-size: var(--fs-8);
+  color: var(--light-gray);
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.scale-marker::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 1px;
+  height: 10px;
+  background: var(--light-gray);
+  transform: translateX(-50%);
+}
+
+.scale-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-7);
+  color: var(--light-gray);
+  margin-top: 5px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
 
 .skills-list { 
   display: grid; 
@@ -909,6 +954,19 @@ main {
   background: var(--text-gradient-yellow);
   height: 100%;
   border-radius: inherit;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .skills-list { 
+    grid-template-columns: repeat(2, 1fr); /* Change to 2 columns on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-list { 
+    grid-template-columns: repeat(1, 1fr); /* Change to 1 column on smaller mobile screens */
+  }
 }
 
 
