@@ -316,7 +316,7 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
+  max-height: 180px;
   overflow: hidden;
   transition: var(--transition-2);
 }
@@ -333,7 +333,7 @@ main {
 
 .avatar-box {
   background: var(--bg-gradient-onyx);
-  border-radius: 50%;
+  border-radius: 30%;
   overflow: hidden;
 }
 
@@ -342,6 +342,7 @@ main {
   height: auto;
   object-fit: cover;
 }
+
 .info-content{
   display: flex;
   flex-direction: column;
@@ -428,6 +429,26 @@ main {
   width: calc(100% - 46px);
 }
 
+.btn_max{
+ 
+  display: inline-block;
+  padding: 3px 12px;
+  background: #c1a207;
+  color: var(--white-1);
+  text-transform: uppercase;
+  font-size: var(--fs-8);
+  font-weight: var(--fw-300);
+  border-radius: 8px;
+  box-shadow: var(--shadow-2);
+  transition: var(--transition-1);
+  text-decoration: none;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensure icon is vertically aligned */
+  width: max-content; /* Ensure button size is minimal */
+
+}
 .contact-title {
   color: var(--light-gray-70);
   font-size: var(--fs-8);
@@ -1046,7 +1067,6 @@ main {
 }
 
 .select-item button:hover { --eerie-black-2: hsl(240, 2%, 20%); }
-
 .project-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -1071,7 +1091,7 @@ main {
 .project-img {
   position: relative;
   width: 100%;
-  height: 50px;
+  height: 200px;
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 15px;
@@ -1140,6 +1160,42 @@ main {
   font-weight: var(--fw-300);
 }
 
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .filter-list {
+    display: none;
+  }
+
+  .filter-select-box {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  .project-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-img {
+    height: 150px; /* Adjust the height for mobile */
+  }
+
+  .project-title,
+  .project-category {
+    text-align: center;
+    margin-left: 0; /* Center align text on mobile */
+  }
+
+  .project-item-icon-box {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .project-item > a:hover .project-item-icon-box {
+    --scale: 1;
+    opacity: 1;
+  }
+}
 
 /*-----------------------------------*\
   #BLOG
@@ -1403,22 +1459,24 @@ textarea.form-input::-webkit-resizer { display: none; }
 /* Style for the button */
 /* Style for the button */
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between; /* Space between text and icon */
-  width: max-content; /* Adjust width to max-content */
-  padding: 3px 12px; /* Adjust padding */
+  display: inline-block;
+  padding: 3px 12px;
   background: #c1a207;
   color: var(--white-1);
-  text-transform: lowercase;
-  font-size: var(--fs-8); /* Adjust font size */
-  font-weight: var(--fw-300); /* Adjust font weight */
-  border-radius: 8px; /* Adjust border radius */
+  text-transform: uppercase;
+  font-size: var(--fs-8);
+  font-weight: var(--fw-300);
+  border-radius: 8px;
   box-shadow: var(--shadow-2);
   transition: var(--transition-1);
   text-decoration: none;
-  margin-top: 10px; /* Adjust margin as needed */
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensure icon is vertically aligned */
+  width: max-content; /* Ensure button size is minimal */
 }
+
 
 .btn span {
   margin-right: 5px; /* Add some space between text and icon */
@@ -1482,7 +1540,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .avatar-box { border-radius: 30px; }
 
-  .avatar-box img { width: 120px; }
 
   .info-content .name { margin-bottom: 15px; }
 
@@ -1978,7 +2035,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { flex-direction: column; }
 
-  .avatar-box img { width: 150px; }
+
 
   .info-content .name {
     white-space: nowrap;
@@ -2062,3 +2119,4 @@ textarea.form-input::-webkit-resizer { display: none; }
 .contact-page-details a:hover {
   text-decoration: underline;
 }
+
