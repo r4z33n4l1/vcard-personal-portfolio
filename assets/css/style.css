@@ -973,12 +973,17 @@ main {
   }
 }
 
-
 /*-----------------------------------*\
   #PORTFOLIO
 \*-----------------------------------*/
 
-.filter-list { display: none; }
+.filter-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+}
 
 .filter-select-box {
   position: relative;
@@ -1059,7 +1064,7 @@ main {
 .project-img {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 50px;
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 15px;
@@ -1081,7 +1086,6 @@ main {
 
 .project-item-icon-box {
   --scale: 0.8;
-
   background: var(--jet);
   color: var(--orange-yellow-crayola);
   position: absolute;
@@ -1128,9 +1132,6 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
 }
-
-
-
 
 
 /*-----------------------------------*\
@@ -1982,4 +1983,35 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+.contact-page-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:auto; /* Adjust height as needed */
+  background: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.contact-page-details {
+  text-align: center;
+  font-size: 1.5em; /* Increase font size */
+  font-weight: var(--fw-400);
+  color: var(--light-gray);
+  line-height: 1.6;
+}
+
+.contact-page-details p {
+  margin: 10px 0; /* Increase spacing between items */
+}
+
+.contact-page-details a {
+  color: var(--text-gradient-yellow);
+  text-decoration: none;
+  font-weight: var(--fw-600); /* Make links bold */
+}
+
+.contact-page-details a:hover {
+  text-decoration: underline;
 }
